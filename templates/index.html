@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>California House Price Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>California House Price</h1>
+
+            <p>
+                Enter the housing details below to estimate the median house value.
+            </p>
+        </div>
+
+
+        <form action="/predict" method="POST">
+
+            <div class="form-grid">
+
+                <!-- MedInc -->
+                <div class="input-box">
+                    <label>MedInc</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="MedInc"
+                        placeholder="Enter MedInc"
+                        required>
+                </div>
+
+
+                <!-- HouseAge -->
+                <div class="input-box">
+                    <label>HouseAge</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="HouseAge"
+                        placeholder="Enter HouseAge"
+                        required>
+                </div>
+
+
+                <!-- AveRooms -->
+                <div class="input-box">
+                    <label>AveRooms</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="AveRooms"
+                        placeholder="Enter AveRooms"
+                        required>
+                </div>
+
+
+                <!-- AveBedrms -->
+                <div class="input-box">
+                    <label>AveBedrms</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="AveBedrms"
+                        placeholder="Enter AveBedrms"
+                        required>
+                </div>
+
+
+                <!-- Population -->
+                <div class="input-box">
+                    <label>Population</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="Population"
+                        placeholder="Enter Population"
+                        required>
+                </div>
+
+
+                <!-- AveOccup -->
+                <div class="input-box">
+                    <label>AveOccup</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="AveOccup"
+                        placeholder="Enter AveOccup"
+                        required>
+                </div>
+
+
+                <!-- Latitude -->
+                <div class="input-box">
+                    <label>Latitude</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="Latitude"
+                        placeholder="Enter Latitude"
+                        required>
+                </div>
+
+
+                <!-- Longitude -->
+                <div class="input-box">
+                    <label>Longitude</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="Longitude"
+                        placeholder="Enter Longitude"
+                        required>
+                </div>
+
+            </div>
+
+
+            <button type="submit">
+                Predict House Price →
+            </button>
+
+        </form>
+
+
+        {% if prediction is defined %}
+
+        <div class="result">
+
+            <h2>California House Price Prediction</h2>
+
+            <p>Predicted House Value</p>
+
+            <div class="price">
+                ${{ prediction }}
+            </div>
+
+            <span>
+                Prediction generated using Linear Regression
+            </span>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

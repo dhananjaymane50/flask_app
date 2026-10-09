@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 10% 20%, #6b176f 0%, transparent 35%),
+        radial-gradient(circle at 90% 10%, #172b70 0%, transparent 35%),
+        radial-gradient(circle at 50% 100%, #40105d 0%, transparent 45%),
+        #100b2b;
+}
+
+
+/* Main Card */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(34, 20, 70, 0.95),
+        rgba(20, 15, 48, 0.97)
+    );
+
+    border: 1px solid rgba(150, 100, 255, 0.25);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.55),
+        0 0 60px rgba(120, 40, 220, 0.15);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.house-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    font-size: 32px;
+
+    background: linear-gradient(
+        135deg,
+        #664cff,
+        #b83cff
+    );
+
+    box-shadow:
+        0 0 25px rgba(120, 70, 255, 0.55);
+}
+
+
+h1 {
+    font-size: 38px;
+
+    margin-bottom: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #bca9ff,
+        #ff8fe8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.header p {
+    color: #aaa3c5;
+    font-size: 16px;
+}
+
+
+/* Form */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-box label {
+    color: #c9c1e8;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border-radius: 12px;
+
+    border: 1px solid #403565;
+
+    outline: none;
+
+    background: rgba(12, 9, 35, 0.75);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+
+
+.input-box input::placeholder {
+    color: #706a87;
+}
+
+
+.input-box input:focus {
+    border-color: #865cff;
+
+    box-shadow:
+        0 0 0 3px rgba(134, 92, 255, 0.12),
+        0 0 20px rgba(134, 92, 255, 0.15);
+
+    background: rgba(20, 14, 52, 0.9);
+}
+
+
+/* Predict Button */
+
+button {
+    width: 100%;
+
+    margin-top: 32px;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg,
+        #6246ff,
+        #8d45ff,
+        #d23cff
+    );
+
+    box-shadow:
+        0 8px 30px rgba(116, 61, 255, 0.4);
+
+    transition: 0.25s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 40px rgba(150, 60, 255, 0.6);
+}
+
+
+/* Prediction Result */
+
+.result {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(82, 46, 150, 0.35),
+        rgba(35, 24, 75, 0.7)
+    );
+
+    border: 1px solid rgba(143, 91, 255, 0.3);
+
+    box-shadow:
+        0 0 30px rgba(111, 60, 255, 0.12);
+}
+
+
+.result h2 {
+    color: #ffffff;
+
+    margin-bottom: 10px;
+}
+
+
+.result p {
+    color: #aaa3c5;
+
+    margin-bottom: 8px;
+}
+
+
+.price {
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin: 10px 0;
+
+    background: linear-gradient(
+        90deg,
+        #65d9ff,
+        #9c72ff,
+        #ff79d8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.result span {
+    color: #817a9d;
+
+    font-size: 13px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+}
